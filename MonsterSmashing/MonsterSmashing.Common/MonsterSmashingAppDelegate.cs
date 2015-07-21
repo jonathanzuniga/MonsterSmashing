@@ -25,12 +25,13 @@ namespace MonsterSmashing.Shared
 			}
 			catch(Exception ex)
 			{
-				var a = ex;
+				System.Diagnostics.Debug.WriteLine(ex);
 			}
 
 
 			var winSize = mainWindow.WindowSizeInPixels;
 			mainWindow.SetDesignResolutionSize(winSize.Width, winSize.Height, CCSceneResolutionPolicy.ExactFit);
+//			CCScene.SetDefaultDesignResolution(winSize.Width, winSize.Height, CCSceneResolutionPolicy.ExactFit);
 
 			// TODO: Set this up when we have a Game Layer
 			CCScene scene = GameStartLayer.GameStartLayerScene(mainWindow);
